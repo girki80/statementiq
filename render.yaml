@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: statementiq
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: PAYSTACK_PUBLIC_KEY
+        sync: false
+      - key: PAYSTACK_BASIC_PLAN_CODE
+        sync: false
+      - key: PAYSTACK_PRO_PLAN_CODE
+        sync: false
+      - key: PAYSTACK_FIRM_PLAN_CODE
+        sync: false
+      - key: CLOUDCONVERT_API_KEY
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_ID
+        sync: false
+      - key: WHATSAPP_VERIFY_TOKEN
+        sync: false
